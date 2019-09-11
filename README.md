@@ -36,7 +36,7 @@ $ sudo /usr/sbin/nginx -s reload
 
 ### Usage
 
-The Python server is reachable at `http://<SERVER_ADDRESS>/python`. The Java server is reachable at `http://<SERVER_ADDRESS>/java`.$
+The Python server is reachable at `http://<SERVER_ADDRESS>/python`. The Java server is reachable at `http://<SERVER_ADDRESS>/java`.
 
 Example:
 ```
