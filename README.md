@@ -13,6 +13,7 @@ $ sudo apt-get install git python3 python3-pip nginx
 Clone the repository:
 ```
 $ git clone https://github.com/Tyraeis/software-engineering-proj1.git
+$ cd software-engineering-proj1
 ```
 
 Install Python dependencies and start the Python server:
