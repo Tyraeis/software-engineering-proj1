@@ -7,7 +7,7 @@
 Install dependency packages:
 ```
 $ sudo apt-get update
-$ sudo apt-get install git python3 python3-pip nginx
+$ sudo apt-get install git python3 python3-pip openjdk-8-jdk nginx
 ```
 
 Clone the repository:
