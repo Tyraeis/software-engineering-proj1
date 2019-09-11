@@ -1,1 +1,3 @@
 runtime: java11
+service: javarng
+entrypoint: java -jar "target/project1-1.0-jar-with-dependencies.jar"
