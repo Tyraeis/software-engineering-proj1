@@ -7,7 +7,7 @@
 Install dependency packages:
 ```
 $ sudo apt-get update
-$ sudo apt-get install git python3 python3-pip openjdk-11-jdk nginx
+$ sudo apt-get install git python3 python3-pip openjdk-11-jdk maven nginx
 ```
 
 Clone the repository:
@@ -26,9 +26,12 @@ $ cd ..
 
 If running the `gunicorn` command fails, `~/.local/bin` may be missing from your `PATH`. Running `source ~/.profile` will fix this issue.
 
-Start the Java server:
+Compile and start the Java server:
 ```
-TODO
+$ cd java
+$ mvn verify
+$ nohup java -jar target/project1-1.0-jar-with-dependencies.jar &
+$ cd ..
 ```
 
 Setup nginx:
@@ -39,7 +42,7 @@ $ sudo /usr/sbin/nginx -s reload
 
 ### Usage
 
-The Python server is reachable at `http://SERVER_ADDRESS/python`. The Java server is reachable at `http://SERVER_ADDRESS/java`.
+The Python server is reachable at `http://SERVER_ADDRESS/pythonrng`. The Java server is reachable at `http://SERVER_ADDRESS/javarng`.
 
 Example:
 ```
@@ -53,9 +56,10 @@ $ curl http://localhost/javarng
 
 Deploying projects to App Engine requires the Google Cloud SDK. Instructions on how to download it can be found [here](https://cloud.google.com/sdk/docs/).
 
-You will also have to create a project for your app. You can create one using the `gcloud` command:
+You will also have to create a Google Cloud project and an App Engine app. You can create them using the `gcloud` command:
 ```
 $ gcloud project create [YOUR_PROJECT_ID]
+$ gcloud app create --project=[YOUR_PROJECT_ID]
 ```
 
 ### Python
@@ -63,12 +67,15 @@ $ gcloud project create [YOUR_PROJECT_ID]
 Deploying the Python App Engine server:
 ```
 $ cd python
-$ gcloud app create --project=[YOUR_PROJECT_ID]
 $ gcloud app deploy
 ```
 
 ### Java
 
-TODO
+Deploying the Java App Engine server:
+```
+$ cd java
+$ gcloud app deploy
+```
 
 
