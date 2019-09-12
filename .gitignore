@@ -1,5 +1,4 @@
 __pycache__
 .vscode
 **.pyc
-/java/build
-/java/.gradle
+/java/target
