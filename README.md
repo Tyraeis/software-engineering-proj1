@@ -7,7 +7,7 @@
 Install dependency packages:
 ```
 $ sudo apt-get update
-$ sudo apt-get install git python3 python3-pip openjdk-8-jdk nginx
+$ sudo apt-get install git python3 python3-pip openjdk-11-jdk nginx
 ```
 
 Clone the repository:
@@ -24,6 +24,8 @@ $ gunicorn -D -b "0.0.0.0:8080" main:app
 $ cd ..
 ```
 
+If running the `gunicorn` command fails, `~/.local/bin` may be missing from your `PATH`. Running `source ~/.profile` will fix this issue.
+
 Start the Java server:
 ```
 TODO
@@ -37,13 +39,13 @@ $ sudo /usr/sbin/nginx -s reload
 
 ### Usage
 
-The Python server is reachable at `http://<SERVER_ADDRESS>/python`. The Java server is reachable at `http://<SERVER_ADDRESS>/java`.
+The Python server is reachable at `http://SERVER_ADDRESS/python`. The Java server is reachable at `http://SERVER_ADDRESS/java`.
 
 Example:
 ```
-$ curl http://localhost/python
+$ curl http://localhost/pythonrng
 795016
-$ curl http://localhost/java
+$ curl http://localhost/javarng
 384129
 ```
 
@@ -64,8 +66,6 @@ $ cd python
 $ gcloud app create --project=[YOUR_PROJECT_ID]
 $ gcloud app deploy
 ```
-
-Your app will be available at `http://YOUR_PROJECT_ID.appspot.com`.
 
 ### Java
 
