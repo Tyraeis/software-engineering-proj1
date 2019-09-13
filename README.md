@@ -7,13 +7,7 @@
 Install dependency packages:
 ```
 $ sudo apt-get update
-$ sudo apt-get install git python3 python3-pip openjdk-11-jdk maven nginx
-```
-
-Clone the repository:
-```
-$ git clone https://github.com/Tyraeis/software-engineering-proj1.git
-$ cd software-engineering-proj1
+$ sudo apt-get install python3 python3-pip openjdk-11-jdk maven nginx
 ```
 
 Install Python dependencies and start the Python server:
